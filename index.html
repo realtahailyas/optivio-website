@@ -770,11 +770,23 @@
             }
 
             .screenshot-image {
-                height: 200px;
+                height: 250px;
             }
 
             .screenshot-content {
                 padding: var(--space-6);
+            }
+
+            .screenshot-content h4 {
+                font-size: 18px;
+            }
+
+            .screenshot-content p {
+                font-size: 15px;
+            }
+
+            .screenshot-content li {
+                font-size: 14px;
             }
 
             .case-study {
@@ -785,8 +797,21 @@
                 font-size: 24px;
             }
 
+            .case-item h5 {
+                font-size: 12px;
+            }
+
+            .case-item p,
+            .case-item li {
+                font-size: 15px;
+            }
+
             .connector-text {
                 padding: var(--space-6);
+            }
+
+            .connector-text p {
+                font-size: 15px;
             }
         }
 
@@ -863,8 +888,9 @@
         .screenshot-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             display: block;
+            padding: var(--space-4);
         }
 
         .screenshot-content {
