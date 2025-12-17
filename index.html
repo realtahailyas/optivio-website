@@ -715,6 +715,23 @@
             section {
                 padding: var(--space-20) 0;
             }
+
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshot-block:nth-child(3) {
+                grid-column: 1;
+                max-width: 100%;
+            }
+
+            .case-study-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-item.full-width {
+                grid-column: 1;
+            }
         }
 
         @media (max-width: 639px) {
@@ -747,6 +764,30 @@
                 align-items: center;
                 gap: var(--space-3);
             }
+
+            .proof-header h2 {
+                font-size: 28px;
+            }
+
+            .screenshot-image {
+                height: 200px;
+            }
+
+            .screenshot-content {
+                padding: var(--space-6);
+            }
+
+            .case-study {
+                padding: var(--space-8);
+            }
+
+            .case-study h3 {
+                font-size: 24px;
+            }
+
+            .connector-text {
+                padding: var(--space-6);
+            }
         }
 
         /* Accessibility */
@@ -754,6 +795,229 @@
         a:focus {
             outline: 2px solid var(--accent);
             outline-offset: 2px;
+        }
+
+        /* Early Proof Section */
+        #early-proof {
+            background: var(--bg-primary);
+        }
+
+        .proof-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--space-16);
+        }
+
+        .proof-header h2 {
+            font-size: 38px;
+            margin-bottom: var(--space-4);
+        }
+
+        .proof-subtext {
+            font-size: 16px;
+            color: var(--text-tertiary);
+            font-style: italic;
+            margin-top: var(--space-3);
+        }
+
+        /* Screenshots Grid */
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-8);
+            margin-bottom: var(--space-12);
+        }
+
+        .screenshot-block {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .screenshot-block:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .screenshot-block:nth-child(3) {
+            grid-column: 1 / -1;
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .screenshot-image {
+            width: 100%;
+            height: 300px;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .screenshot-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .screenshot-content {
+            padding: var(--space-8);
+        }
+
+        .screenshot-content h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+            line-height: 1.3;
+        }
+
+        .screenshot-content p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--space-5);
+        }
+
+        .screenshot-content ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+
+        .screenshot-content li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        .screenshot-content li::before {
+            content: "→";
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* Connector Text */
+        .connector-text {
+            text-align: center;
+            max-width: 700px;
+            margin: var(--space-16) auto;
+            padding: var(--space-8);
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent);
+            border-radius: var(--radius-md);
+        }
+
+        .connector-text p {
+            font-size: 17px;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Case Study */
+        .case-study {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-12);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .case-study h3 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: var(--space-10);
+            color: var(--text-primary);
+        }
+
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-8);
+        }
+
+        .case-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+        }
+
+        .case-item.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .case-item.highlight {
+            background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
+            border-color: var(--accent);
+            border-width: 2px;
+        }
+
+        .case-item h5 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: var(--space-3);
+        }
+
+        .case-item p {
+            font-size: 16px;
+            color: var(--text-primary);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .case-item ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+            margin: 0;
+        }
+
+        .case-item li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: 16px;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        .case-item li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .case-item.highlight li::before {
+            content: "✓";
+            color: var(--success);
+        }
+
+        .case-disclaimer {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            text-align: center;
+            margin-top: var(--space-8);
+            font-style: italic;
+            line-height: 1.5;
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -869,6 +1133,121 @@
                     <h3 class="step-title">Aggressive Scaling</h3>
                     <p class="step-description">Budget shifts fast into what works. Losers are killed early. Winners get fuel. This is where most agencies fail.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Proof Section -->
+    <section id="early-proof">
+        <div class="container">
+            <div class="proof-header">
+                <h2>Recent Testing & Optimization Results</h2>
+                <p class="proof-subtext">Early-stage Meta Ads testing results from a UAE-based fashion eCommerce brand. Client identity kept confidential.</p>
+            </div>
+
+            <!-- Screenshots Grid -->
+            <div class="screenshots-grid">
+                <!-- Block 1: After (Stable Phase) -->
+                <div class="screenshot-block">
+                    <div class="screenshot-image">
+                        <img src="campaign-after.png" alt="Campaign Performance Overview" loading="lazy">
+                    </div>
+                    <div class="screenshot-content">
+                        <h4>Campaign Performance Overview (10-Day Testing Window)</h4>
+                        <p>This campaign was launched with a controlled daily budget to validate targeting and creative direction. Performance stabilized within the first week, delivering consistent purchases at a manageable CPA.</p>
+                        <ul>
+                            <li>Total spend: ~$300</li>
+                            <li>Purchases generated: 14</li>
+                            <li>CPA stabilized around ~$21</li>
+                            <li>CTR improved during testing phase</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Block 2: Ad Set Comparison -->
+                <div class="screenshot-block">
+                    <div class="screenshot-image">
+                        <img src="adset-breakdown.png" alt="Ad Set Breakdown" loading="lazy">
+                    </div>
+                    <div class="screenshot-content">
+                        <h4>Targeting Test: Broad vs Interest-Based Audiences</h4>
+                        <p>Two ad sets were tested in parallel to identify the most efficient audience structure. Broad targeting slightly outperformed interest stacking, helping reduce overall CPA.</p>
+                        <ul>
+                            <li>Broad audience showed lower CPA</li>
+                            <li>Interest-based set validated demand</li>
+                            <li>Budget allocation refined based on early signals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Block 3: Before (Learning Phase) -->
+                <div class="screenshot-block">
+                    <div class="screenshot-image">
+                        <img src="campaign-before.png" alt="Early Testing Phase" loading="lazy">
+                    </div>
+                    <div class="screenshot-content">
+                        <h4>Early Testing Phase (Initial 3 Days)</h4>
+                        <p>During the initial learning phase, performance was unstable with higher CPA. This data was used to identify inefficiencies before optimization.</p>
+                        <ul>
+                            <li>Higher CPA during learning phase</li>
+                            <li>Lower CTR initially</li>
+                            <li>Key insights collected for optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Connector Text -->
+            <div class="connector-text">
+                <p>After identifying early inefficiencies, the campaign structure and delivery were optimized over the following days, leading to improved stability and performance.</p>
+            </div>
+
+            <!-- Case Study -->
+            <div class="case-study">
+                <h3>Mini Case Study: UAE Fashion Brand</h3>
+                
+                <div class="case-study-grid">
+                    <div class="case-item">
+                        <h5>Brand Type</h5>
+                        <p>UAE-based fashion eCommerce brand</p>
+                    </div>
+
+                    <div class="case-item">
+                        <h5>Objective</h5>
+                        <p>Launch and stabilize Meta Ads performance during the initial testing phase while controlling CPA.</p>
+                    </div>
+
+                    <div class="case-item full-width">
+                        <h5>Challenges</h5>
+                        <ul>
+                            <li>High CPA during early delivery</li>
+                            <li>Unstable performance in learning phase</li>
+                            <li>Need to validate audience structure quickly</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-item full-width">
+                        <h5>Our Approach</h5>
+                        <ul>
+                            <li>Simplified campaign structure for clean testing</li>
+                            <li>Ran Broad vs Interest-based ad sets in parallel</li>
+                            <li>Closely monitored early data and delivery signals</li>
+                            <li>Controlled budget to avoid inefficient scaling</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-item full-width highlight">
+                        <h5>Results (within 10 days)</h5>
+                        <ul>
+                            <li>CPA reduced from ~$30 to ~$21</li>
+                            <li>Purchases increased steadily after optimization</li>
+                            <li>CTR improved as delivery stabilized</li>
+                            <li>Campaign moved into scaling-ready phase</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="case-disclaimer">Results shown reflect an early testing and optimization phase. Individual results may vary based on product, offer, and market conditions.</p>
             </div>
         </div>
     </section>
