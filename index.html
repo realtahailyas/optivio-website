@@ -716,31 +716,6 @@
                 padding: var(--space-20) 0;
             }
 
-            .screenshots-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-10);
-            }
-
-            .screenshot-block:nth-child(3) {
-                grid-column: 1;
-                max-width: 100%;
-            }
-
-            .screenshot-image {
-                height: 400px;
-            }
-
-            .case-study-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .case-item.full-width {
-                grid-column: 1;
-            }
-
-            .case-study {
-                padding: var(--space-10) var(--space-6);
-            }
         }
 
         @media (max-width: 639px) {
@@ -773,18 +748,23 @@
                 align-items: center;
                 gap: var(--space-3);
             }
+        }
 
+        /* ========================================
+           TABLET RESPONSIVE (640px+)
+        ======================================== */
+        
+        @media (min-width: 640px) {
             .proof-header h2 {
-                font-size: 26px;
-                line-height: 1.3;
+                font-size: 34px;
             }
 
             .proof-subtext {
-                font-size: 14px;
+                font-size: 15px;
             }
 
             .screenshot-image {
-                height: 350px;
+                height: 260px;
             }
 
             .screenshot-content {
@@ -793,47 +773,171 @@
 
             .screenshot-content h4 {
                 font-size: 20px;
-                line-height: 1.4;
             }
 
             .screenshot-content p {
                 font-size: 16px;
             }
 
-            .screenshot-content li {
-                font-size: 16px;
+            .metric-list li {
+                font-size: 15px;
+            }
+
+            .connector-text {
+                padding: var(--space-8);
+            }
+
+            .connector-text p {
+                font-size: 17px;
             }
 
             .case-study {
-                padding: var(--space-10) var(--space-6);
-                margin: 0 var(--space-4);
+                padding: var(--space-10);
             }
 
             .case-study h3 {
-                font-size: 24px;
-                line-height: 1.3;
+                font-size: 28px;
             }
 
             .case-item {
                 padding: var(--space-8);
             }
 
-            .case-item h5 {
-                font-size: 13px;
-            }
-
             .case-item p,
             .case-item li {
                 font-size: 16px;
             }
+        }
 
-            .connector-text {
-                padding: var(--space-8);
-                margin: var(--space-12) var(--space-4);
+        /* ========================================
+           DESKTOP RESPONSIVE (1024px+)
+        ======================================== */
+        
+        @media (min-width: 1024px) {
+            #early-proof {
+                padding: var(--space-24) 0;
             }
 
-            .connector-text p {
+            .proof-header {
+                margin-bottom: var(--space-16);
+            }
+
+            .proof-header h2 {
+                font-size: 38px;
+            }
+
+            .proof-subtext {
                 font-size: 16px;
+            }
+
+            /* 2-Column Grid for Screenshots */
+            .screenshots-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-8);
+            }
+
+            /* Third item spans both columns and centers */
+            .screenshot-block:nth-child(3) {
+                grid-column: 1 / -1;
+                max-width: 600px;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .screenshot-image {
+                height: 300px;
+            }
+
+            .screenshot-content {
+                padding: var(--space-10);
+            }
+
+            .screenshot-content h4 {
+                font-size: 22px;
+            }
+
+            .screenshot-content p {
+                font-size: 17px;
+            }
+
+            .metric-list li {
+                font-size: 16px;
+            }
+
+            .connector-text {
+                margin: var(--space-16) auto;
+            }
+
+            .case-study {
+                padding: var(--space-12);
+            }
+
+            .case-study h3 {
+                font-size: 32px;
+                margin-bottom: var(--space-10);
+            }
+
+            /* 2-Column Grid for Case Study */
+            .case-study-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-8);
+            }
+
+            /* Results span both columns */
+            .case-results {
+                grid-column: 1 / -1;
+            }
+
+            .screenshot-block:hover {
+                transform: translateY(-4px);
+                box-shadow: var(--shadow-lg);
+            }
+        }
+
+        /* ========================================
+           LARGE DESKTOP (1280px+)
+        ======================================== */
+        
+        @media (min-width: 1280px) {
+            .screenshots-grid {
+                gap: var(--space-10);
+            }
+
+            .case-study-grid {
+                gap: var(--space-10);
+            }
+        }
+
+        /* ========================================
+           PRINT & ACCESSIBILITY
+        ======================================== */
+        
+        @media print {
+            .screenshot-image {
+                height: auto;
+                min-height: 200px;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .screenshot-block {
+                border-width: 2px;
+            }
+            
+            .case-item {
+                border-width: 2px;
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .screenshot-block,
+            .screenshot-block:hover {
+                transition: none;
+                transform: none;
             }
         }
 
@@ -844,33 +948,42 @@
             outline-offset: 2px;
         }
 
-        /* Early Proof Section */
+        /* ========================================
+           EARLY PROOF SECTION - MOBILE FIRST
+        ======================================== */
+        
         #early-proof {
             background: var(--bg-primary);
+            padding: var(--space-16) 0;
         }
 
+        /* Header */
         .proof-header {
             text-align: center;
             max-width: 800px;
-            margin: 0 auto var(--space-16);
+            margin: 0 auto var(--space-12);
+            padding: 0 var(--space-4);
         }
 
         .proof-header h2 {
-            font-size: 38px;
+            font-size: 28px;
+            line-height: 1.2;
             margin-bottom: var(--space-4);
+            color: var(--text-primary);
         }
 
         .proof-subtext {
-            font-size: 16px;
+            font-size: 14px;
             color: var(--text-tertiary);
             font-style: italic;
             margin-top: var(--space-3);
+            line-height: 1.5;
         }
 
-        /* Screenshots Grid */
+        /* Screenshots Grid - Mobile First */
         .screenshots-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-direction: column;
             gap: var(--space-8);
             margin-bottom: var(--space-12);
         }
@@ -884,22 +997,16 @@
         }
 
         .screenshot-block:hover {
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-md);
             border-color: var(--accent);
-            transform: translateY(-4px);
         }
 
-        .screenshot-block:nth-child(3) {
-            grid-column: 1 / -1;
-            max-width: 600px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
+        /* Image Container */
         .screenshot-image {
+            position: relative;
             width: 100%;
-            height: 300px;
-            background: var(--bg-tertiary);
+            height: 220px;
+            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -910,17 +1017,39 @@
         .screenshot-image img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             display: block;
-            padding: var(--space-4);
         }
 
+        /* Image Placeholder (shows when image is loading/missing) */
+        .image-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            z-index: 0;
+        }
+
+        .image-placeholder span {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .screenshot-image img {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Content */
         .screenshot-content {
-            padding: var(--space-8);
+            padding: var(--space-6);
         }
 
         .screenshot-content h4 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: var(--space-4);
@@ -928,47 +1057,61 @@
         }
 
         .screenshot-content p {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--text-secondary);
             line-height: 1.6;
             margin-bottom: var(--space-5);
         }
 
-        .screenshot-content ul {
+        /* Metric Lists */
+        .metric-list {
             list-style: none;
             display: flex;
             flex-direction: column;
             gap: var(--space-3);
+            margin: 0;
+            padding: 0;
         }
 
-        .screenshot-content li {
+        .metric-list li {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: var(--space-2);
-            font-size: 15px;
+            font-size: 14px;
             color: var(--text-secondary);
+            line-height: 1.5;
+            padding-left: var(--space-5);
+            position: relative;
         }
 
-        .screenshot-content li::before {
+        .metric-list li::before {
             content: "→";
             color: var(--accent);
             font-weight: 700;
             font-size: 16px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .metric-list li strong {
+            color: var(--text-primary);
+            font-weight: 600;
         }
 
         /* Connector Text */
         .connector-text {
             text-align: center;
             max-width: 700px;
-            margin: var(--space-16) auto;
-            padding: var(--space-8);
+            margin: var(--space-12) auto;
+            padding: var(--space-6);
             background: var(--bg-secondary);
             border-left: 4px solid var(--accent);
             border-radius: var(--radius-md);
         }
 
         .connector-text p {
-            font-size: 17px;
+            font-size: 16px;
             color: var(--text-primary);
             font-weight: 500;
             margin: 0;
@@ -979,22 +1122,23 @@
         .case-study {
             background: var(--bg-secondary);
             border-radius: var(--radius-xl);
-            padding: var(--space-12);
-            max-width: 1000px;
-            margin: 0 auto;
+            padding: var(--space-8);
+            margin-top: var(--space-12);
         }
 
         .case-study h3 {
-            font-size: 32px;
+            font-size: 24px;
             text-align: center;
-            margin-bottom: var(--space-10);
+            margin-bottom: var(--space-8);
             color: var(--text-primary);
+            line-height: 1.2;
         }
 
+        /* Case Study Grid - Mobile First */
         .case-study-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-8);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-6);
         }
 
         .case-item {
@@ -1004,18 +1148,8 @@
             padding: var(--space-6);
         }
 
-        .case-item.full-width {
-            grid-column: 1 / -1;
-        }
-
-        .case-item.highlight {
-            background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
-            border-color: var(--accent);
-            border-width: 2px;
-        }
-
         .case-item h5 {
-            font-size: 14px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             color: var(--accent);
@@ -1024,7 +1158,7 @@
         }
 
         .case-item p {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--text-primary);
             margin: 0;
             line-height: 1.5;
@@ -1036,15 +1170,18 @@
             flex-direction: column;
             gap: var(--space-3);
             margin: 0;
+            padding: 0;
         }
 
         .case-item li {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: var(--space-2);
-            font-size: 16px;
+            font-size: 14px;
             color: var(--text-primary);
             line-height: 1.5;
+            padding-left: var(--space-5);
+            position: relative;
         }
 
         .case-item li::before {
@@ -1052,18 +1189,33 @@
             color: var(--accent);
             font-weight: 700;
             font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: -2px;
         }
 
-        .case-item.highlight li::before {
+        /* Results Section Highlight */
+        .case-results {
+            background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
+            border-color: var(--accent);
+            border-width: 2px;
+        }
+
+        .results-list li::before {
             content: "✓";
             color: var(--success);
+            font-size: 18px;
+            top: 0;
         }
 
+        /* Disclaimer */
         .case-disclaimer {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-tertiary);
             text-align: center;
             margin-top: var(--space-8);
+            padding-top: var(--space-6);
+            border-top: 1px solid var(--border);
             font-style: italic;
             line-height: 1.5;
         }
@@ -1199,15 +1351,18 @@
                 <div class="screenshot-block">
                     <div class="screenshot-image">
                         <img src="campaign-after.png" alt="Campaign Performance Overview" loading="lazy">
+                        <div class="image-placeholder">
+                            <span>📊 Campaign Overview</span>
+                        </div>
                     </div>
                     <div class="screenshot-content">
                         <h4>Campaign Performance Overview (10-Day Testing Window)</h4>
                         <p>This campaign was launched with a controlled daily budget to validate targeting and creative direction. Performance stabilized within the first week, delivering consistent purchases at a manageable CPA.</p>
-                        <ul>
-                            <li>Total spend: ~$300</li>
-                            <li>Purchases generated: 14</li>
-                            <li>CPA stabilized around ~$21</li>
-                            <li>CTR improved during testing phase</li>
+                        <ul class="metric-list">
+                            <li><strong>Total spend:</strong> ~$300</li>
+                            <li><strong>Purchases generated:</strong> 14</li>
+                            <li><strong>CPA stabilized:</strong> ~$21</li>
+                            <li><strong>CTR:</strong> Improved during testing phase</li>
                         </ul>
                     </div>
                 </div>
@@ -1216,14 +1371,17 @@
                 <div class="screenshot-block">
                     <div class="screenshot-image">
                         <img src="adset-breakdown.png" alt="Ad Set Breakdown" loading="lazy">
+                        <div class="image-placeholder">
+                            <span>🎯 Targeting Comparison</span>
+                        </div>
                     </div>
                     <div class="screenshot-content">
                         <h4>Targeting Test: Broad vs Interest-Based Audiences</h4>
                         <p>Two ad sets were tested in parallel to identify the most efficient audience structure. Broad targeting slightly outperformed interest stacking, helping reduce overall CPA.</p>
-                        <ul>
-                            <li>Broad audience showed lower CPA</li>
-                            <li>Interest-based set validated demand</li>
-                            <li>Budget allocation refined based on early signals</li>
+                        <ul class="metric-list">
+                            <li><strong>Broad audience:</strong> Lower CPA</li>
+                            <li><strong>Interest-based:</strong> Validated demand</li>
+                            <li><strong>Budget allocation:</strong> Refined based on signals</li>
                         </ul>
                     </div>
                 </div>
@@ -1232,14 +1390,17 @@
                 <div class="screenshot-block">
                     <div class="screenshot-image">
                         <img src="campaign-before.png" alt="Early Testing Phase" loading="lazy">
+                        <div class="image-placeholder">
+                            <span>🔬 Learning Phase</span>
+                        </div>
                     </div>
                     <div class="screenshot-content">
                         <h4>Early Testing Phase (Initial 3 Days)</h4>
                         <p>During the initial learning phase, performance was unstable with higher CPA. This data was used to identify inefficiencies before optimization.</p>
-                        <ul>
-                            <li>Higher CPA during learning phase</li>
-                            <li>Lower CTR initially</li>
-                            <li>Key insights collected for optimization</li>
+                        <ul class="metric-list">
+                            <li><strong>Higher CPA:</strong> During learning phase</li>
+                            <li><strong>Lower CTR:</strong> Initially</li>
+                            <li><strong>Key insights:</strong> Collected for optimization</li>
                         </ul>
                     </div>
                 </div>
@@ -1265,7 +1426,7 @@
                         <p>Launch and stabilize Meta Ads performance during the initial testing phase while controlling CPA.</p>
                     </div>
 
-                    <div class="case-item full-width">
+                    <div class="case-item">
                         <h5>Challenges</h5>
                         <ul>
                             <li>High CPA during early delivery</li>
@@ -1274,7 +1435,7 @@
                         </ul>
                     </div>
 
-                    <div class="case-item full-width">
+                    <div class="case-item">
                         <h5>Our Approach</h5>
                         <ul>
                             <li>Simplified campaign structure for clean testing</li>
@@ -1284,9 +1445,9 @@
                         </ul>
                     </div>
 
-                    <div class="case-item full-width highlight">
+                    <div class="case-item case-results">
                         <h5>Results (within 10 days)</h5>
-                        <ul>
+                        <ul class="results-list">
                             <li>CPA reduced from ~$30 to ~$21</li>
                             <li>Purchases increased steadily after optimization</li>
                             <li>CTR improved as delivery stabilized</li>
