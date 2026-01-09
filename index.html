@@ -211,6 +211,31 @@
             margin-top: var(--space-3);
         }
 
+        .cta-filter {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            font-style: italic;
+            margin-top: var(--space-4);
+            margin-bottom: 0;
+        }
+
+        .cta-scarcity {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            font-style: italic;
+            margin-top: var(--space-2);
+            margin-bottom: 0;
+        }
+
+        .authenticity-label {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            text-align: center;
+            margin-bottom: var(--space-3);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+
         .trust-badges {
             display: flex;
             gap: var(--space-6);
@@ -234,80 +259,42 @@
         }
 
         .hero-visual {
-            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 50%, #EFF6FF 100%);
-            border-radius: var(--radius-xl);
-            padding: var(--space-12);
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 450px;
             position: relative;
-            overflow: hidden;
-            border: 1px solid var(--border);
         }
 
         .visual-content {
             position: relative;
-            z-index: 1;
             width: 100%;
         }
 
-        .graph-container {
+        .proof-card {
             background: white;
-            border-radius: var(--radius-lg);
-            padding: var(--space-8);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
             box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border);
         }
 
-        .graph-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: var(--space-6);
-            padding-bottom: var(--space-4);
-            border-bottom: 1px solid var(--border);
+        .proof-card img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            display: block;
+            margin-bottom: var(--space-4);
         }
 
-        .graph-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-primary);
+        .proof-caption {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            text-align: center;
+            line-height: 1.5;
+            margin: 0;
+            font-style: italic;
         }
-
-        .graph-metric {
-            font-size: 12px;
-            color: var(--success);
-            font-weight: 600;
-        }
-
-        .graph-bars {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            height: 200px;
-            gap: 12px;
-        }
-
-        .bar {
-            flex: 1;
-            background: linear-gradient(to top, var(--accent), var(--accent-light));
-            border-radius: 6px 6px 0 0;
-            position: relative;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
-        }
-
-        .bar:hover {
-            opacity: 1;
-        }
-
-        .bar:nth-child(1) { height: 45%; }
-        .bar:nth-child(2) { height: 60%; }
-        .bar:nth-child(3) { height: 75%; }
-        .bar:nth-child(4) { height: 90%; }
-        .bar:nth-child(5) { height: 100%; }
-        .bar:nth-child(6) { height: 85%; }
-        .bar:nth-child(7) { height: 95%; }
 
         /* Problem Section */
         #problem {
@@ -515,7 +502,7 @@
 
         /* Offer Section */
         #offer {
-            background: var(--accent);
+            background: #4A7EF2;
             color: white;
         }
 
@@ -530,7 +517,7 @@
         }
 
         .offer-content {
-            max-width: 900px;
+            max-width: 650px;
             margin: 0 auto;
             text-align: center;
         }
@@ -674,6 +661,14 @@
             margin-bottom: var(--space-10);
         }
 
+        .cta-reassurance {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-top: var(--space-4);
+            margin-bottom: 0;
+        }
+
         .final-subtext {
             font-size: 14px;
             color: var(--text-secondary);
@@ -759,191 +754,6 @@
         ======================================== */
         
         @media (min-width: 640px) {
-            .proof-header h2 {
-                font-size: 34px;
-            }
-
-            .proof-subtext {
-                font-size: 15px;
-            }
-
-            .screenshot-image {
-                height: 260px;
-            }
-
-            .screenshot-content {
-                padding: var(--space-8);
-            }
-
-            .screenshot-content h4 {
-                font-size: 20px;
-            }
-
-            .screenshot-content p {
-                font-size: 16px;
-            }
-
-            .metric-list li {
-                font-size: 15px;
-            }
-
-            .connector-text {
-                padding: var(--space-8);
-            }
-
-            .connector-text p {
-                font-size: 17px;
-            }
-
-            .case-study {
-                padding: var(--space-10);
-            }
-
-            .case-study h3 {
-                font-size: 28px;
-            }
-
-            .case-item {
-                padding: var(--space-8);
-            }
-
-            .case-item p,
-            .case-item li {
-                font-size: 16px;
-            }
-        }
-
-        /* ========================================
-           DESKTOP RESPONSIVE (1024px+)
-        ======================================== */
-        
-        @media (min-width: 1024px) {
-            #early-proof {
-                padding: var(--space-24) 0;
-            }
-
-            .proof-header {
-                margin-bottom: var(--space-16);
-            }
-
-            .proof-header h2 {
-                font-size: 38px;
-            }
-
-            .proof-subtext {
-                font-size: 16px;
-            }
-
-            /* 2-Column Grid for Screenshots */
-            .screenshots-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-8);
-            }
-
-            /* Third item spans both columns and centers */
-            .screenshot-block:nth-child(3) {
-                grid-column: 1 / -1;
-                max-width: 600px;
-                margin: 0 auto;
-                width: 100%;
-            }
-
-            .screenshot-image {
-                height: 300px;
-            }
-
-            .screenshot-content {
-                padding: var(--space-10);
-            }
-
-            .screenshot-content h4 {
-                font-size: 22px;
-            }
-
-            .screenshot-content p {
-                font-size: 17px;
-            }
-
-            .metric-list li {
-                font-size: 16px;
-            }
-
-            .connector-text {
-                margin: var(--space-16) auto;
-            }
-
-            .case-study {
-                padding: var(--space-12);
-            }
-
-            .case-study h3 {
-                font-size: 32px;
-                margin-bottom: var(--space-10);
-            }
-
-            /* 2-Column Grid for Case Study */
-            .case-study-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-8);
-            }
-
-            /* Results span both columns */
-            .case-results {
-                grid-column: 1 / -1;
-            }
-
-            .screenshot-block:hover {
-                transform: translateY(-4px);
-                box-shadow: var(--shadow-lg);
-            }
-        }
-
-        /* ========================================
-           LARGE DESKTOP (1280px+)
-        ======================================== */
-        
-        @media (min-width: 1280px) {
-            .screenshots-grid {
-                gap: var(--space-10);
-            }
-
-            .case-study-grid {
-                gap: var(--space-10);
-            }
-        }
-
-        /* ========================================
-           PRINT & ACCESSIBILITY
-        ======================================== */
-        
-        @media print {
-            .screenshot-image {
-                height: auto;
-                min-height: 200px;
-            }
-        }
-
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-            .screenshot-block {
-                border-width: 2px;
-            }
-            
-            .case-item {
-                border-width: 2px;
-            }
-        }
-
-        /* Reduced motion */
-        @media (prefers-reduced-motion: reduce) {
-            .screenshot-block,
-            .screenshot-block:hover {
-                transition: none;
-                transform: none;
-            }
-        }
 
         /* Accessibility */
         button:focus,
@@ -953,46 +763,45 @@
         }
 
         /* ========================================
-           EARLY PROOF SECTION - MOBILE FIRST
+           PROOF OF EXECUTION SECTION
         ======================================== */
         
-        #early-proof {
+        #proof-of-execution {
             background: var(--bg-primary);
-            padding: var(--space-16) 0;
+            padding: var(--space-20) 0;
         }
 
-        /* Header */
-        .proof-header {
+        .execution-header {
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto var(--space-12);
+            max-width: 900px;
+            margin: 0 auto var(--space-16);
             padding: 0 var(--space-4);
         }
 
-        .proof-header h2 {
-            font-size: 28px;
+        .execution-header h2 {
+            font-size: 32px;
             line-height: 1.2;
             margin-bottom: var(--space-4);
             color: var(--text-primary);
+            font-weight: 700;
         }
 
-        .proof-subtext {
-            font-size: 14px;
-            color: var(--text-tertiary);
-            font-style: italic;
+        .execution-subtext {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.6;
             margin-top: var(--space-3);
-            line-height: 1.5;
         }
 
-        /* Screenshots Grid - Mobile First */
-        .screenshots-grid {
-            display: flex;
-            flex-direction: column;
+        .execution-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: var(--space-8);
-            margin-bottom: var(--space-12);
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .screenshot-block {
+        .execution-card {
             background: white;
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
@@ -1000,60 +809,35 @@
             transition: all 0.3s ease;
         }
 
-        .screenshot-block:hover {
+        .execution-card:hover {
             box-shadow: var(--shadow-md);
-            border-color: var(--accent);
+            border-color: var(--border-hover);
         }
 
-        /* Image Container */
-        .screenshot-image {
-            position: relative;
+        .execution-image {
             width: 100%;
-            height: 220px;
-            background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+            height: 280px;
+            background: var(--bg-tertiary);
             display: flex;
             align-items: center;
             justify-content: center;
-            border-bottom: 1px solid var(--border);
             overflow: hidden;
+            border-bottom: 1px solid var(--border);
         }
 
-        .screenshot-image img {
+        .execution-image img {
             width: 100%;
             height: 100%;
             object-fit: contain;
             display: block;
-            padding: var(--space-2);
+            padding: var(--space-3);
         }
 
-        /* Image Placeholder (shows when image is loading/missing) */
-        .image-placeholder {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-            z-index: 0;
+        .execution-content {
+            padding: var(--space-8);
         }
 
-        .image-placeholder span {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--accent);
-        }
-
-        .screenshot-image img {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Content */
-        .screenshot-content {
-            padding: var(--space-6);
-        }
-
-        .screenshot-content h4 {
+        .execution-content h4 {
             font-size: 18px;
             font-weight: 600;
             color: var(--text-primary);
@@ -1061,168 +845,56 @@
             line-height: 1.3;
         }
 
-        .screenshot-content p {
+        .execution-content p {
             font-size: 15px;
             color: var(--text-secondary);
             line-height: 1.6;
-            margin-bottom: var(--space-5);
-        }
-
-        /* Metric Lists */
-        .metric-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-3);
             margin: 0;
-            padding: 0;
         }
 
-        .metric-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-2);
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-            padding-left: var(--space-5);
-            position: relative;
-        }
-
-        .metric-list li::before {
-            content: "→";
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 16px;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        .metric-list li strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        /* Connector Text */
-        .connector-text {
-            text-align: center;
-            max-width: 700px;
-            margin: var(--space-12) auto;
-            padding: var(--space-6);
-            background: var(--bg-secondary);
-            border-left: 4px solid var(--accent);
-            border-radius: var(--radius-md);
-        }
-
-        .connector-text p {
-            font-size: 16px;
-            color: var(--text-primary);
-            font-weight: 500;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        /* Case Study */
-        .case-study {
-            background: var(--bg-secondary);
-            border-radius: var(--radius-xl);
-            padding: var(--space-8);
-            margin-top: var(--space-12);
-        }
-
-        .case-study h3 {
-            font-size: 24px;
-            text-align: center;
-            margin-bottom: var(--space-8);
-            color: var(--text-primary);
-            line-height: 1.2;
-        }
-
-        /* Case Study Grid - Mobile First */
-        .case-study-grid {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-6);
-        }
-
-        .case-item {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: var(--space-6);
-        }
-
-        .case-item h5 {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: var(--space-3);
-        }
-
-        .case-item p {
+        .execution-stat {
             font-size: 15px;
             color: var(--text-primary);
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        .case-item ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-3);
-            margin: 0;
-            padding: 0;
-        }
-
-        .case-item li {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-2);
-            font-size: 14px;
-            color: var(--text-primary);
-            line-height: 1.5;
-            padding-left: var(--space-5);
-            position: relative;
-        }
-
-        .case-item li::before {
-            content: "•";
-            color: var(--accent);
-            font-weight: 700;
-            font-size: 20px;
-            position: absolute;
-            left: 0;
-            top: -2px;
-        }
-
-        /* Results Section Highlight */
-        .case-results {
-            background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
-            border-color: var(--accent);
-            border-width: 2px;
-        }
-
-        .results-list li::before {
-            content: "✓";
-            color: var(--success);
-            font-size: 18px;
-            top: 0;
-        }
-
-        /* Disclaimer */
-        .case-disclaimer {
-            font-size: 12px;
-            color: var(--text-tertiary);
-            text-align: center;
-            margin-top: var(--space-8);
-            padding-top: var(--space-6);
+            margin-top: var(--space-4);
+            padding-top: var(--space-4);
             border-top: 1px solid var(--border);
-            font-style: italic;
-            line-height: 1.5;
+        }
+
+        @media (max-width: 1024px) {
+            .execution-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-10);
+            }
+
+            .execution-image {
+                height: 320px;
+            }
+        }
+
+        @media (max-width: 639px) {
+            .execution-header h2 {
+                font-size: 26px;
+            }
+
+            .execution-subtext {
+                font-size: 15px;
+            }
+
+            .execution-image {
+                height: 260px;
+            }
+
+            .execution-content {
+                padding: var(--space-6);
+            }
+
+            .execution-content h4 {
+                font-size: 17px;
+            }
+
+            .execution-content p {
+                font-size: 14px;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -1242,7 +914,7 @@
     <header style="padding: 24px 0; border-bottom: 1px solid var(--border); background: var(--bg-primary);">
         <div class="container">
             <a href="index.html" style="display: inline-block;">
-                <img src="logo.png" alt="Optivio" style="height: 40px; width: auto;">
+                <img src="logowhite.png" alt="Optivio" style="height: 40px; width: auto;">
             </a>
         </div>
     </header>
@@ -1253,11 +925,13 @@
             <div class="hero-grid">
                 <div class="hero-text">
                     <div class="eyebrow">META ADS FOR ECOM BRANDS</div>
-                    <h1>We Scale Profitable Ecom Brands With Meta Ads — Not Guesswork.</h1>
-                    <p class="hero-subheadline">We build, manage, and scale Meta (Facebook & Instagram) ad campaigns focused on ROAS, not vanity metrics.</p>
+                    <h1>We Manage & Scale Meta Ads for Ecom Brands — Without Guesswork, Fluff, or Vanity Metrics.</h1>
+                    <p class="hero-subheadline">Structured testing, CPA control, and clean scale decisions — so you don't burn budget guessing what works.</p>
                     <div class="cta-wrapper">
                         <a href="https://calendly.com/optiviomediahq/new-meeting" class="btn-primary">👉 Review My Ad Account</a>
-                        <p class="cta-subtext">Free. No pitch. Straight answers.</p>
+                        <p class="cta-subtext">Free account review. No pitch — just clarity on what's working and what isn't.</p>
+                        <p class="cta-filter">This is for operators, not screenshot collectors.</p>
+                        <p class="cta-scarcity">Currently onboarding 2 brands per month. First-come.</p>
                     </div>
                     <div class="trust-badges">
                         <span>No long contracts</span>
@@ -1267,20 +941,10 @@
                 </div>
                 <div class="hero-visual">
                     <div class="visual-content">
-                        <div class="graph-container">
-                            <div class="graph-header">
-                                <span class="graph-title">Ad Performance</span>
-                                <span class="graph-metric">+127% ROAS</span>
-                            </div>
-                            <div class="graph-bars">
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                                <div class="bar"></div>
-                            </div>
+                        <p class="authenticity-label">Actual Ads Manager Screenshot</p>
+                        <div class="proof-card">
+                            <img src="72kproof.png" alt="Meta Ads Manager Performance" loading="eager">
+                            <p class="proof-caption">$72,000+ in Meta ad spend managed across testing & scaling phases. Client identities kept confidential.</p>
                         </div>
                     </div>
                 </div>
@@ -1342,126 +1006,51 @@
         </div>
     </section>
 
-    <!-- Early Proof Section -->
-    <section id="early-proof">
+    <!-- Proof of Execution Section -->
+    <section id="proof-of-execution">
         <div class="container">
-            <div class="proof-header">
-                <h2>Recent Testing & Optimization Results</h2>
-                <p class="proof-subtext">Early-stage Meta Ads testing results from a UAE-based fashion eCommerce brand. Client identity kept confidential.</p>
+            <div class="execution-header">
+                <h2>Real Ad Accounts. Real Spend. No Slides.</h2>
+                <p class="execution-subtext">Snapshots from real ad accounts showing testing, demand validation, and performance signals across regions.</p>
             </div>
 
-            <!-- Screenshots Grid -->
-            <div class="screenshots-grid">
-                <!-- Block 1: After (Stable Phase) -->
-                <div class="screenshot-block">
-                    <div class="screenshot-image">
-                        <img src="campaign-after.png" alt="Campaign Performance Overview" loading="lazy">
-                        <div class="image-placeholder">
-                            <span>📊 Campaign Overview</span>
-                        </div>
+            <!-- Execution Grid -->
+            <div class="execution-grid">
+                <!-- Proof 1: CA Leads -->
+                <div class="execution-card">
+                    <div class="execution-image">
+                        <img src="ca.png" alt="Lead Generation Testing CA Market" loading="lazy">
                     </div>
-                    <div class="screenshot-content">
-                        <h4>Campaign Performance Overview (10-Day Testing Window)</h4>
-                        <p>This campaign was launched with a controlled daily budget to validate targeting and creative direction. Performance stabilized within the first week, delivering consistent purchases at a manageable CPA.</p>
-                        <ul class="metric-list">
-                            <li><strong>Total spend:</strong> ~$300</li>
-                            <li><strong>Purchases generated:</strong> 14</li>
-                            <li><strong>CPA stabilized:</strong> ~$21</li>
-                            <li><strong>CTR:</strong> Improved during testing phase</li>
-                        </ul>
+                    <div class="execution-content">
+                        <h4>Lead Generation Testing — CA Market</h4>
+                        <p>Used audience testing and lookalikes to validate cost-efficient lead flow.</p>
+                        <p class="execution-stat"><strong>$3,000 spend → 224 leads @ $13.39 CPL</strong></p>
                     </div>
                 </div>
 
-                <!-- Block 2: Ad Set Comparison -->
-                <div class="screenshot-block">
-                    <div class="screenshot-image">
-                        <img src="adset-breakdown.png" alt="Ad Set Breakdown" loading="lazy">
-                        <div class="image-placeholder">
-                            <span>🎯 Targeting Comparison</span>
-                        </div>
+                <!-- Proof 2: AUS Messaging -->
+                <div class="execution-card">
+                    <div class="execution-image">
+                        <img src="aus1.png" alt="Messaging Funnel Test AUS Market" loading="lazy">
                     </div>
-                    <div class="screenshot-content">
-                        <h4>Targeting Test: Broad vs Interest-Based Audiences</h4>
-                        <p>Two ad sets were tested in parallel to identify the most efficient audience structure. Broad targeting slightly outperformed interest stacking, helping reduce overall CPA.</p>
-                        <ul class="metric-list">
-                            <li><strong>Broad audience:</strong> Lower CPA</li>
-                            <li><strong>Interest-based:</strong> Validated demand</li>
-                            <li><strong>Budget allocation:</strong> Refined based on signals</li>
-                        </ul>
+                    <div class="execution-content">
+                        <h4>Messaging Funnel Test — AUS Market</h4>
+                        <p>Tested cold messaging campaigns to measure conversation cost and intent quality.</p>
+                        <p class="execution-stat"><strong>$2,500 spend → 389 conversations @ $6.42</strong></p>
                     </div>
                 </div>
 
-                <!-- Block 3: Before (Learning Phase) -->
-                <div class="screenshot-block">
-                    <div class="screenshot-image">
-                        <img src="campaign-before.png" alt="Early Testing Phase" loading="lazy">
-                        <div class="image-placeholder">
-                            <span>🔬 Learning Phase</span>
-                        </div>
+                <!-- Proof 3: UAE Purchases -->
+                <div class="execution-card">
+                    <div class="execution-image">
+                        <img src="UAE1.png" alt="Early Purchase Funnel Test UAE" loading="lazy">
                     </div>
-                    <div class="screenshot-content">
-                        <h4>Early Testing Phase (Initial 3 Days)</h4>
-                        <p>During the initial learning phase, performance was unstable with higher CPA. This data was used to identify inefficiencies before optimization.</p>
-                        <ul class="metric-list">
-                            <li><strong>Higher CPA:</strong> During learning phase</li>
-                            <li><strong>Lower CTR:</strong> Initially</li>
-                            <li><strong>Key insights:</strong> Collected for optimization</li>
-                        </ul>
+                    <div class="execution-content">
+                        <h4>Early Purchase Funnel Test — UAE Fashion Brand</h4>
+                        <p>Small-budget purchase testing to validate audience structure before scale.</p>
+                        <p class="execution-stat"><strong>$750 spend → 21 purchases @ 3.2 ROAS</strong></p>
                     </div>
                 </div>
-            </div>
-
-            <!-- Connector Text -->
-            <div class="connector-text">
-                <p>After identifying early inefficiencies, the campaign structure and delivery were optimized over the following days, leading to improved stability and performance.</p>
-            </div>
-
-            <!-- Case Study -->
-            <div class="case-study">
-                <h3>Mini Case Study: UAE Fashion Brand</h3>
-                
-                <div class="case-study-grid">
-                    <div class="case-item">
-                        <h5>Brand Type</h5>
-                        <p>UAE-based fashion eCommerce brand</p>
-                    </div>
-
-                    <div class="case-item">
-                        <h5>Objective</h5>
-                        <p>Launch and stabilize Meta Ads performance during the initial testing phase while controlling CPA.</p>
-                    </div>
-
-                    <div class="case-item">
-                        <h5>Challenges</h5>
-                        <ul>
-                            <li>High CPA during early delivery</li>
-                            <li>Unstable performance in learning phase</li>
-                            <li>Need to validate audience structure quickly</li>
-                        </ul>
-                    </div>
-
-                    <div class="case-item">
-                        <h5>Our Approach</h5>
-                        <ul>
-                            <li>Simplified campaign structure for clean testing</li>
-                            <li>Ran Broad vs Interest-based ad sets in parallel</li>
-                            <li>Closely monitored early data and delivery signals</li>
-                            <li>Controlled budget to avoid inefficient scaling</li>
-                        </ul>
-                    </div>
-
-                    <div class="case-item case-results">
-                        <h5>Results (within 10 days)</h5>
-                        <ul class="results-list">
-                            <li>CPA reduced from ~$30 to ~$21</li>
-                            <li>Purchases increased steadily after optimization</li>
-                            <li>CTR improved as delivery stabilized</li>
-                            <li>Campaign moved into scaling-ready phase</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <p class="case-disclaimer">Results shown reflect an early testing and optimization phase. Individual results may vary based on product, offer, and market conditions.</p>
             </div>
         </div>
     </section>
@@ -1562,6 +1151,7 @@
                 <p>Book a 15-minute ad account review. We'll look at your current setup and tell you exactly where the leaks are — no obligation.</p>
                 <a href="https://calendly.com/optiviomediahq/new-meeting" class="btn-primary">👉 Review My Ad Account</a>
                 <p class="cta-subtext">Takes 15 minutes. You'll know where the leaks are.</p>
+                <p class="cta-reassurance">If we're not a fit, we'll tell you in the first call.</p>
                 <p class="final-subtext">Available for calls within 48 hours</p>
             </div>
         </div>
@@ -1570,7 +1160,7 @@
     <!-- Footer -->
     <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 48px 0; margin-top: 48px;">
         <div class="container" style="text-align: center;">
-            <img src="logo.png" alt="Optivio" style="height: 36px; width: auto; margin-bottom: 16px; opacity: 0.8;">
+            <img src="logowhite.png" alt="Optivio" style="height: 36px; width: auto; margin-bottom: 16px; opacity: 0.8;">
             <p style="font-size: 14px; color: var(--text-tertiary); margin: 0;">
                 © 2025 Optivio. All rights reserved.
             </p>
