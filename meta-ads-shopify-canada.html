@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Ads for Shopify Brands in Canada — AOV & Scaling Playbook | Optivio</title>
+    <meta name="description" content="Playbook for Canadian Shopify stores with higher AOVs. Testing, attribution, and scaling rules that preserve margin while growing revenue.">
+    <link rel="canonical" href="https://optiviomedia.online/meta-ads-shopify-canada.html" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Meta Ads for Shopify Brands in Canada — AOV & Scaling Playbook",
+      "description": "Playbook for Canadian Shopify stores with higher AOVs. Testing, attribution, and scaling rules that preserve margin while growing revenue.",
+      "author": {
+        "@type": "Person",
+        "name": "Taha Ilyas",
+        "url": "https://optiviomedia.online/about-taha-ilyas.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Optivio Media",
+        "url": "https://optiviomedia.online"
+      },
+      "datePublished": "2026-02-14",
+      "dateModified": "2026-02-14"
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F8FAFC;
+            --bg-tertiary: #F1F5F9;
+            --text-primary: #0F172A;
+            --text-secondary: #64748B;
+            --text-tertiary: #94A3B8;
+            --accent: #2563EB;
+            --accent-hover: #1D4ED8;
+            --accent-light: #3B82F6;
+            --success: #10B981;
+            --error: #EF4444;
+            --border: #E2E8F0;
+            --border-hover: #CBD5E1;
+            --space-2: 8px;
+            --space-3: 12px;
+            --space-4: 16px;
+            --space-5: 20px;
+            --space-6: 24px;
+            --space-8: 32px;
+            --space-10: 40px;
+            --space-12: 48px;
+            --space-16: 64px;
+            --space-20: 80px;
+            --space-24: 96px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            line-height: 1.7;
+            font-size: 18px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 var(--space-8);
+        }
+
+        .container-wide {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-8);
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.25;
+        }
+
+        h1 { font-size: 40px; letter-spacing: -0.02em; margin-bottom: var(--space-6); }
+        h2 { font-size: 28px; margin-bottom: var(--space-6); margin-top: var(--space-16); }
+        h3 { font-size: 22px; margin-bottom: var(--space-4); margin-top: var(--space-10); }
+
+        p {
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin-bottom: var(--space-5);
+            font-size: 17px;
+        }
+
+        strong { color: var(--text-primary); }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 18px 36px;
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+        }
+
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        header .container-wide {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-link {
+            font-size: 15px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover { color: var(--accent); }
+
+        .article-header {
+            padding: var(--space-20) 0 var(--space-10);
+            border-bottom: 1px solid var(--border);
+            margin-bottom: var(--space-10);
+        }
+
+        .article-header .eyebrow {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: var(--space-4);
+        }
+
+        .article-meta {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            margin-top: var(--space-4);
+        }
+
+        .article-meta a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .article-meta a:hover { text-decoration: underline; }
+
+        .article-content ul, .article-content ol {
+            margin: var(--space-5) 0;
+            padding-left: var(--space-6);
+        }
+
+        .article-content li {
+            color: var(--text-secondary);
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: var(--space-3);
+        }
+
+        .callout-box {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+            padding: var(--space-6) var(--space-8);
+            margin: var(--space-8) 0;
+        }
+
+        .callout-box p {
+            margin-bottom: 0;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .internal-link-box {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            margin: var(--space-8) 0;
+            text-align: center;
+        }
+
+        .internal-link-box p {
+            margin-bottom: var(--space-3);
+            font-size: 15px;
+        }
+
+        .internal-link-box a {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .article-cta {
+            background: #4A7EF2;
+            color: white;
+            border-radius: var(--radius-xl);
+            padding: var(--space-12);
+            text-align: center;
+            margin: var(--space-16) 0;
+        }
+
+        .article-cta h2 {
+            color: white;
+            margin-top: 0;
+            margin-bottom: var(--space-4);
+            font-size: 26px;
+        }
+
+        .article-cta p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: var(--space-6);
+            font-size: 16px;
+        }
+
+        .article-cta .btn-primary {
+            background: white;
+            color: var(--accent);
+        }
+
+        .cta-reassurance {
+            font-size: 13px;
+            color: rgba(255,255,255,0.6);
+            font-style: italic;
+            margin-top: var(--space-4);
+        }
+
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 48px 0;
+        }
+
+        @media (max-width: 639px) {
+            h1 { font-size: 28px; }
+            h2 { font-size: 24px; margin-top: var(--space-12); }
+            h3 { font-size: 20px; }
+            body { font-size: 16px; }
+            p { font-size: 16px; }
+            .container { padding: 0 var(--space-4); }
+            .article-header { padding: var(--space-16) 0 var(--space-8); }
+            .btn-primary { width: 100%; text-align: center; }
+            .article-cta { padding: var(--space-8); }
+            .article-content li { font-size: 16px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container-wide">
+            <a href="index.html" style="display: inline-block;">
+                <img src="logowhite.png" alt="Optivio Media" style="height: 40px; width: auto;">
+            </a>
+            <a href="index.html" class="back-link">← Back to Optivio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="article-header">
+            <p class="eyebrow">Regional Guide</p>
+            <h1>Meta Ads for Shopify Brands in Canada — AOV & Scaling Playbook</h1>
+            <p class="article-meta">By <a href="about-taha-ilyas.html">Taha Ilyas</a> · Optivio Media · February 2026</p>
+        </div>
+
+        <div class="article-content">
+
+            <p>Canadian Shopify brands with higher average order values operate in a unique position within <strong>Meta Ads</strong>. The margin structure allows for more aggressive testing, but the competitive Canadian eCommerce landscape — dominated by cross-border US brands and rising domestic DTC players — requires precision in attribution, creative strategy, and scaling mechanics. This playbook covers the specific framework we use for <strong>Meta Ads Shopify Canada</strong> campaigns focused on protecting margin while scaling revenue.</p>
+
+            <h2>Canadian Market Signals & Buyer Behaviour</h2>
+
+            <p>Canada's eCommerce market is the 9th largest globally but punches above its weight in terms of per-capita online spending. For <strong>Facebook Ads Canada eCommerce</strong> campaigns, understanding these market dynamics changes everything about how you structure campaigns.</p>
+
+            <ul>
+                <li><strong>Population concentration matters.</strong> 80% of Canadian consumers live within 150 km of the US border. Toronto, Vancouver, Montreal, Calgary, and Ottawa represent the bulk of your addressable audience. Geo-targeting these metros specifically (rather than all of Canada) often improves CPA by 15–25%.</li>
+                <li><strong>CPMs range from CAD $10–30</strong> depending on niche and season. Canadian CPMs are generally lower than the US but have been climbing steadily. Fashion and wellness niches sit higher. B2B and specialty products trend lower.</li>
+                <li><strong>Bilingual considerations.</strong> Quebec represents 23% of Canada's population and primarily consumes content in French. If you're targeting all of Canada, you need French-language creative for Quebec. Ignoring Quebec means losing access to 8.5 million potential customers.</li>
+                <li><strong>Cross-border competition.</strong> Canadian shoppers routinely purchase from US-based Shopify stores. Your Canadian brand advantage is faster shipping, no customs uncertainty, and CAD pricing. Lean into these in your ad copy.</li>
+                <li><strong>High privacy awareness.</strong> Canada's PIPEDA regulations and general privacy consciousness mean server-side tracking (CAPI) is essential. Browser-only Pixel tracking loses an even higher percentage of signals in Canada than global averages.</li>
+            </ul>
+
+            <div class="callout-box">
+                <p>Canadian Shopify brands with AOVs above CAD $120 have a structural advantage in Meta Ads: higher margin per purchase means you can tolerate higher CPAs while remaining profitable. This opens up testing budgets that lower-AOV brands can't sustain.</p>
+            </div>
+
+            <h2>Test Matrix for High-AOV Stores</h2>
+
+            <p>High-AOV products require a different testing approach than low-ticket impulse buys. The purchase decision takes longer, the consideration phase involves more touchpoints, and your creative needs to build trust before asking for the sale.</p>
+
+            <h3>Budget Framework</h3>
+
+            <p>For <strong>Canadian Shopify stores</strong> with AOVs above CAD $120, we recommend an initial test budget of <strong>CAD $2,000–4,000 over 14–21 days</strong>. The higher budget compared to lower-AOV brands is necessary because you need more impressions per conversion to reach statistical significance when each purchase is a considered decision.</p>
+
+            <h3>Campaign Structure</h3>
+
+            <ul>
+                <li><strong>1 ABO campaign</strong> with 3 ad sets at CAD $45–70/day each</li>
+                <li><strong>Ad Set 1:</strong> Broad targeting — Canada, core demographic, no interests. For high-AOV products, Meta's algorithm is surprisingly effective at finding qualified buyers through creative signals alone.</li>
+                <li><strong>Ad Set 2:</strong> Value-based lookalike 1% built from top 25% of purchasers by order value. This finds people who behave like your best customers, not just any customer.</li>
+                <li><strong>Ad Set 3:</strong> Interest + behaviour stack — combining relevant interests with "Engaged Shoppers" behaviour targeting. This narrows to high-intent, actively shopping users.</li>
+            </ul>
+
+            <h3>Creative Strategy for Considered Purchases</h3>
+
+            <p>High-AOV products need creatives that build trust and justify the price. The impulse-buy UGC approach that works for CAD $30 products fails at CAD $200+.</p>
+
+            <ul>
+                <li><strong>Founder story videos (60–90 seconds):</strong> The founder explaining why the product exists, what makes it different, and who it's for. These establish authority and trust — critical for high-AOV conversions.</li>
+                <li><strong>Customer testimony reels:</strong> Real customers explaining their purchase decision, not just showing the product. "Why I chose this over alternatives" messaging converts better than generic unboxing for considered purchases.</li>
+                <li><strong>Product quality deep-dives:</strong> Close-up shots of materials, craftsmanship, or technical details. High-AOV buyers want to see where their money goes. Show the quality, don't just claim it.</li>
+                <li><strong>Comparison content:</strong> Tasteful side-by-side comparisons showing your product against generic alternatives. Don't name competitors — focus on quality differences that justify the premium.</li>
+            </ul>
+
+            <h2>Attribution and Cross-Border Customers</h2>
+
+            <p>Attribution in Canada has an additional complexity layer: <strong>cross-border purchasing</strong>. A significant percentage of Canadian shoppers interact with US-targeted ads, and many Canadian brands ship to the US. This creates attribution noise that can distort your scaling decisions.</p>
+
+            <h3>Setting Up Clean Attribution</h3>
+
+            <ul>
+                <li><strong>Separate campaigns by geography.</strong> Run Canada and US as distinct campaigns — never combined. Combined geo campaigns make it impossible to understand true CAC by market.</li>
+                <li><strong>Use UTM parameters rigorously.</strong> Every ad should have UTM source, medium, campaign, and content parameters. This lets you cross-reference Meta's reported conversions against your Shopify analytics and GA4 data.</li>
+                <li><strong>Track MER (Marketing Efficiency Ratio) by market.</strong> Total revenue from Canadian customers divided by total Canadian ad spend gives you the real picture — not in-platform ROAS which Meta inflates through modelled conversions.</li>
+                <li><strong>Account for longer conversion windows.</strong> High-AOV Canadian purchases often take 7–14 days from first click to purchase. Use 7-day click, 1-day view attribution at minimum. For products above CAD $300, consider extending your reporting window to 14 days before making optimization decisions.</li>
+            </ul>
+
+            <div class="callout-box">
+                <p>If your Shopify store ships to both Canada and the US, set up separate Shopify markets with distinct pricing (CAD and USD). This prevents currency confusion in your tracking and gives Meta cleaner conversion signals per market.</p>
+            </div>
+
+            <h2>Scaling While Protecting Margin — MER Focus</h2>
+
+            <p>For high-AOV Canadian brands, the goal isn't maximum revenue at any cost — it's <strong>profitable growth</strong>. Scaling Meta Ads without a margin-protection framework leads to the classic trap: revenue goes up, profit goes down.</p>
+
+            <h3>MER-Based Scaling Rules</h3>
+
+            <ul>
+                <li><strong>Define your MER floor.</strong> Calculate the minimum MER (total revenue ÷ total ad spend) that maintains your target profit margin. For most high-AOV Shopify brands, this sits between 3.0x and 5.0x depending on COGS and fulfilment costs.</li>
+                <li><strong>Scale only when MER is above floor for 7+ consecutive days.</strong> A single good day doesn't justify a budget increase. Wait for consistent performance before pushing spend higher.</li>
+                <li><strong>Budget increase rule: 20% every 5 days maximum.</strong> In the Canadian market, aggressive budget jumps (50%+ overnight) almost always trigger a learning phase reset that tanks CPA for 3–5 days. Slow, consistent increases preserve efficiency.</li>
+                <li><strong>Creative refresh cadence: every 10–14 days.</strong> Canadian audiences are smaller than the US. Your top-performing ads will fatigue faster. Plan for 2–3 new creative sets per month during active scaling.</li>
+            </ul>
+
+            <h3>When to Pull Back</h3>
+
+            <p>Scaling isn't always linear. In the Canadian market, know your triggers for reducing spend:</p>
+
+            <ul>
+                <li>MER drops below floor for 3+ consecutive days → reduce budget by 20% and review creative performance</li>
+                <li>Frequency exceeds 3.0 on any prospecting ad set → pause and rotate creative</li>
+                <li>CPA exceeds 1.5x your target for 5+ days → restructure campaign before continuing</li>
+            </ul>
+
+            <div class="internal-link-box">
+                <p>Want to see how we structure MER-based scaling for Shopify brands?</p>
+                <a href="meta-ads-shopify-dubai.html">See our full Meta Ads framework for Shopify stores →</a>
+            </div>
+
+            <h2>Quick Checklist for Launching in Canada</h2>
+
+            <p>Before spending your first dollar on <strong>Shopify Ads in Canada</strong>, run through this launch checklist:</p>
+
+            <ul>
+                <li><strong>Tracking:</strong> Meta Pixel + Conversions API connected through Shopify's native integration. Event deduplication confirmed. Event Match Quality ≥ 6.0.</li>
+                <li><strong>Product feed:</strong> All prices in CAD. Product titles include relevant keywords. Images are high-resolution and mobile-optimized.</li>
+                <li><strong>Geo-targeting:</strong> Canada-only campaign (separate from US). Consider metro-level targeting for initial tests (Toronto, Vancouver, Montreal, Calgary).</li>
+                <li><strong>Bilingual creative:</strong> French-language ad sets for Quebec if targeting all of Canada. At minimum, include French in your catalog ads.</li>
+                <li><strong>Currency:</strong> Ad account billing in CAD to avoid exchange rate variance in reporting.</li>
+                <li><strong>Attribution:</strong> Set to 7-day click, 1-day view minimum. UTM parameters on all ads.</li>
+                <li><strong>MER tracking:</strong> Spreadsheet or dashboard tracking total Canadian revenue vs. total Canadian ad spend, updated daily during testing.</li>
+                <li><strong>Creative:</strong> Minimum 6 creative variations ready — a mix of video, static, and catalog formats. Include at least 1 founder story or detailed product quality piece for high-AOV trust-building.</li>
+                <li><strong>Landing page:</strong> Shopify store loads under 3 seconds on mobile. Prices displayed in CAD. Shipping and returns policy clearly visible.</li>
+                <li><strong>Budget:</strong> CAD $2,000–4,000 allocated for a 14–21 day structured testing phase. Don't judge results before day 10.</li>
+            </ul>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="article-cta">
+            <h2>Book a Call — Canada Focus</h2>
+            <p>We'll review your Shopify ad account through a Canadian market lens — AOV strategy, audience structure, attribution setup, and scaling plan specific to the Canadian market.</p>
+            <a href="https://calendly.com/optiviomediahq/new-meeting" class="btn-primary">Book Your Free Review</a>
+            <p class="cta-reassurance">15 minutes. No obligation. Just a clear view of what to fix.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-wide" style="text-align: center;">
+            <img src="logowhite.png" alt="Optivio" style="height: 36px; width: auto; margin-bottom: 16px; opacity: 0.8;">
+            <p style="font-size: 14px; color: var(--text-tertiary); margin: 0;">
+                © 2026 Optivio Media. All rights reserved.
+            </p>
+            <p style="font-size: 13px; color: var(--text-tertiary); margin-top: 8px;">
+                <a href="index.html" style="color: var(--text-tertiary); text-decoration: underline;">Home</a> · 
+                <a href="meta-ads-shopify-dubai.html" style="color: var(--text-tertiary); text-decoration: underline;">Shopify Ads Dubai</a> · 
+                <a href="meta-ads-shopify-australia.html" style="color: var(--text-tertiary); text-decoration: underline;">Shopify Ads Australia</a> · 
+                <a href="case-study-uae-fashion-meta-ads.html" style="color: var(--text-tertiary); text-decoration: underline;">UAE Case Study</a> · 
+                <a href="about-taha-ilyas.html" style="color: var(--text-tertiary); text-decoration: underline;">Founder</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
