@@ -7,6 +7,7 @@
     <meta name="description" content="Your ad account review is confirmed. Here's what happens next.">
     <link rel="canonical" href="https://optiviomedia.online/thankyou.html" />
     <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#4A7EF2">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -349,6 +350,12 @@
                 transition-duration: 0.01ms !important;
             }
         }
+
+        button:focus,
+        a:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
     </style>
 </head>
 <body>
@@ -356,7 +363,7 @@
     <!-- Header -->
     <header style="position: fixed; top: 0; left: 0; right: 0; padding: 20px 32px; background: white; border-bottom: 1px solid var(--border); z-index: 1000; box-shadow: var(--shadow-sm);">
         <a href="index.html" style="display: inline-block;">
-            <img src="logo.png" alt="Optivio" style="height: 36px; width: auto;">
+            <img src="logo.png" alt="Optivio Media" style="height: 36px; width: auto;">
         </a>
     </header>
 
@@ -364,7 +371,7 @@
         <div class="thank-you-card">
             <!-- Success Icon -->
             <div class="success-icon">
-                <svg viewBox="0 0 52 52">
+                <svg viewBox="0 0 52 52" role="img" aria-label="Success checkmark">
                     <path d="M14 27l10 10 18-18"/>
                 </svg>
             </div>
@@ -416,7 +423,7 @@
 
             <!-- Back Link -->
             <a href="index.html" class="back-link">← Back to Homepage</a>
-            <p style="margin-top: 16px; font-size: 14px; color: var(--text-tertiary);">Need to reschedule? Check your confirmation email or <a href="https://calendly.com/optiviomediahq/new-meeting" style="color: var(--accent); font-weight: 600;">click here</a>.</p>
+            <p style="margin-top: 16px; font-size: 14px; color: var(--text-tertiary);">Need to reschedule? Check your confirmation email or <a href="https://calendly.com/optiviomediahq/new-meeting" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600;">click here</a>.</p>
         </div>
     </div>
 
