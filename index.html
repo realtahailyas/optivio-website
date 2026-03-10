@@ -32,13 +32,13 @@
             --bg-secondary: #F8FAFC;
             --bg-tertiary: #F1F5F9;
             --text-primary: #0F172A;
-            --text-secondary: #64748B;
+            --text-secondary: #475569;
             --text-tertiary: #94A3B8;
-            --accent: #2563EB;
-            --accent-hover: #1D4ED8;
-            --accent-light: #3B82F6;
-            --success: #10B981;
-            --error: #EF4444;
+            --accent: #1D4ED8;
+            --accent-hover: #1E3A8A;
+            --accent-light: #2563EB;
+            --success: #059669;
+            --error: #DC2626;
             --border: #E2E8F0;
             --border-hover: #CBD5E1;
             --space-1: 4px;
@@ -96,14 +96,14 @@
         }
 
         h1 {
-            font-size: 52px;
-            letter-spacing: -0.02em;
+            font-size: 48px;
+            letter-spacing: -0.03em;
             margin-bottom: var(--space-6);
         }
 
         h2 {
-            font-size: 42px;
-            letter-spacing: -0.01em;
+            font-size: 36px;
+            letter-spacing: -0.02em;
             margin-bottom: var(--space-16);
         }
 
@@ -125,22 +125,23 @@
 
         .btn-primary {
             display: inline-block;
-            background: var(--accent);
+            background: var(--text-primary);
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
-            padding: 18px 36px;
-            border-radius: var(--radius-lg);
+            padding: 16px 32px;
+            border-radius: var(--radius-md);
             text-decoration: none;
             transition: all 0.2s ease;
             border: none;
             cursor: pointer;
+            letter-spacing: -0.01em;
         }
 
         .btn-primary:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+            background: #1E293B;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.2);
         }
 
         .btn-primary:active {
@@ -178,8 +179,19 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: var(--accent);
+            color: var(--text-secondary);
             margin-bottom: var(--space-4);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .eyebrow::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            display: inline-block;
         }
 
         .hero-text h1 {
@@ -249,7 +261,7 @@
             content: "✓";
             color: var(--success);
             font-weight: 700;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .hero-visual {
@@ -267,9 +279,9 @@
 
         .proof-card {
             background: white;
-            border-radius: var(--radius-xl);
-            padding: var(--space-6);
-            box-shadow: var(--shadow-xl);
+            border-radius: var(--radius-lg);
+            padding: var(--space-5);
+            box-shadow: var(--shadow-lg);
             border: 1px solid var(--border);
         }
 
@@ -315,17 +327,18 @@
         }
 
         .problem-number {
-            width: 56px;
-            height: 56px;
-            background: var(--accent);
-            color: white;
+            width: 44px;
+            height: 44px;
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 28px;
+            font-size: 20px;
             margin-bottom: var(--space-6);
+            border: 1px solid var(--border);
         }
 
         .problem-card h3 {
@@ -382,16 +395,16 @@
             position: absolute;
             left: var(--space-10);
             top: var(--space-10);
-            width: 50px;
-            height: 50px;
-            background: var(--accent);
+            width: 44px;
+            height: 44px;
+            background: var(--text-primary);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .step-label {
@@ -419,7 +432,7 @@
 
         /* PROOF OF EXECUTION SECTION */
         #proof-of-execution {
-            background: var(--bg-primary);
+            background: var(--bg-secondary);
             padding: var(--space-20) 0;
         }
 
@@ -430,9 +443,9 @@
         }
 
         .execution-header h2 {
-            font-size: 38px;
+            font-size: 36px;
             line-height: 1.2;
-            margin-bottom: var(--space-4);
+            margin-bottom: var(--space-3);
             color: var(--text-primary);
             font-weight: 700;
         }
@@ -489,26 +502,30 @@
         }
 
         .execution-content h4 {
-            font-size: 19px;
+            font-size: 18px;
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: var(--space-4);
+            margin-bottom: var(--space-3);
             line-height: 1.3;
         }
 
         .execution-content p {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--text-secondary);
             line-height: 1.6;
             margin: 0 0 var(--space-3) 0;
         }
 
         .execution-stat {
-            font-size: 16px;
+            font-size: 14px;
             color: var(--text-primary);
             margin-top: var(--space-4);
             padding-top: var(--space-4);
             border-top: 1px solid var(--border);
+            background: var(--bg-secondary);
+            margin: var(--space-4) -24px -24px;
+            padding: var(--space-4) 24px;
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
         }
 
         #qualification {
@@ -586,7 +603,7 @@
         }
 
         #offer {
-            background: #4A7EF2;
+            background: #0F172A;
             color: white;
         }
 
@@ -597,7 +614,7 @@
         }
 
         #offer p {
-            color: rgba(255, 255, 255, 0.95);
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .offer-content {
@@ -623,11 +640,11 @@
         }
 
         .offer-includes {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--radius-lg);
             padding: var(--space-8);
             margin-top: var(--space-8);
-            backdrop-filter: blur(10px);
             text-align: left;
         }
 
@@ -647,15 +664,15 @@
             display: flex;
             align-items: flex-start;
             gap: var(--space-3);
-            font-size: 17px;
-            color: rgba(255, 255, 255, 0.95);
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .offer-includes li::before {
-            content: "•";
-            color: white;
+            content: "✓";
+            color: #10B981;
             font-weight: 700;
-            font-size: 24px;
+            font-size: 18px;
         }
 
         .offer-no-list {
@@ -759,8 +776,8 @@
 
         /* RESPONSIVE DESIGN */
         @media (max-width: 1024px) {
-            h1 { font-size: 40px; }
-            h2 { font-size: 32px; }
+            h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
             
             .hero-grid,
             .problem-grid,
@@ -827,9 +844,9 @@
         }
 
         @media (max-width: 639px) {
-            h1 { font-size: 32px; }
-            h2 { font-size: 28px; }
-            h3 { font-size: 22px; }
+            h1 { font-size: 30px; }
+            h2 { font-size: 24px; }
+            h3 { font-size: 20px; }
             
             body { font-size: 16px; }
             
@@ -859,7 +876,7 @@
 
             /* PROOF SECTION MOBILE FIX */
             .execution-header h2 {
-                font-size: 26px;
+                font-size: 24px;
                 line-height: 1.3;
             }
 
@@ -935,28 +952,26 @@
         }
 
         .nav-cta {
-            font-size: 14px !important;
+            font-size: 13px !important;
             font-weight: 600 !important;
             color: white !important;
-            background: var(--accent);
-            padding: 10px 20px;
-            border-radius: var(--radius-md);
+            background: var(--text-primary);
+            padding: 9px 18px;
+            border-radius: var(--radius-sm);
             transition: all 0.2s ease !important;
         }
 
         .nav-cta:hover {
-            background: var(--accent-hover) !important;
+            background: #1E293B !important;
             color: white !important;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
         }
 
         /* STATS BAR */
         .stats-bar {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            padding: var(--space-8) 0;
+            background: var(--text-primary);
+            padding: var(--space-6) 0;
         }
 
         .stats-grid {
@@ -973,17 +988,17 @@
         }
 
         .stat-number {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
-            color: var(--accent);
+            color: white;
             line-height: 1;
-            margin-bottom: var(--space-2);
+            margin-bottom: var(--space-1);
         }
 
         .stat-label {
-            font-size: 14px;
-            color: var(--text-secondary);
-            font-weight: 500;
+            font-size: 13px;
+            color: #94A3B8;
+            font-weight: 400;
         }
 
         @media (max-width: 639px) {
@@ -997,11 +1012,11 @@
             }
 
             .stat-number {
-                font-size: 26px;
+                font-size: 22px;
             }
 
             .stat-label {
-                font-size: 12px;
+                font-size: 11px;
             }
         }
 
@@ -1118,7 +1133,7 @@
                     <h1>We Manage & Scale Meta Ads for Ecom Brands — Without Guesswork, Fluff, or Vanity Metrics.</h1>
                     <p class="hero-subheadline">Structured testing, CPA control, and clean scale decisions — so you don't burn budget guessing what works.</p>
                     <div class="cta-wrapper">
-                        <a href="https://calendly.com/optiviomediahq/new-meeting" class="btn-primary">👉 Review My Ad Account</a>
+                        <a href="https://calendly.com/optiviomediahq/new-meeting" class="btn-primary">Review My Ad Account</a>
                         <p class="cta-subtext">Free account review. No pitch — just clarity on what's working and what isn't.</p>
                         <p class="cta-filter">This is for operators, not screenshot collectors.</p>
                         <p class="cta-scarcity">Currently onboarding 2 brands per month. First-come.</p>
@@ -1133,8 +1148,8 @@
                     <div class="visual-content">
                         <p class="authenticity-label">Actual Ads Manager Screenshot</p>
                         <div class="proof-card">
-                            <img src="72kproof.png" alt="Meta Ads Manager dashboard showing $40K+ tracked ad spend with 4.18x blended ROAS for eCommerce brands" loading="eager">
-                            <p class="proof-caption">$40,000+ in verified Meta ad spend across 6 campaigns — 2,679 purchases at 4.18x blended ROAS. Full breakdown below.</p>
+                            <img src="72kproof.png" alt="Meta Ads Manager showing $72K+ in managed ad spend across eCommerce campaigns" loading="eager">
+                            <p class="proof-caption">$72,000+ in Meta ad spend managed across eCommerce accounts. Detailed campaign breakdowns below.</p>
                         </div>
                     </div>
                 </div>
@@ -1146,8 +1161,8 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <span class="stat-number">$40K+</span>
-                    <span class="stat-label">Verified Ad Spend</span>
+                    <span class="stat-number">$72K+</span>
+                    <span class="stat-label">Ad Spend Managed</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">4.18x</span>
@@ -1155,7 +1170,7 @@
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">2,679</span>
-                    <span class="stat-label">Purchases Driven</span>
+                    <span class="stat-label">Purchases Tracked</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">$167K+</span>
@@ -1292,37 +1307,6 @@
                 </div>
             </div>
 
-            <!-- Additional Proof Strip -->
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: var(--space-12);">
-                <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div style="height: 200px; overflow: hidden; border-bottom: 1px solid var(--border);">
-                        <img src="ca.png" alt="Meta Ads lead generation testing in Canadian eCommerce market" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; padding: 12px;">
-                    </div>
-                    <div style="padding: 16px;">
-                        <p style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 0 0 4px;">Canada — Lead Gen Test</p>
-                        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">$3,000 → 224 leads @ $13.39 CPL</p>
-                    </div>
-                </div>
-                <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div style="height: 200px; overflow: hidden; border-bottom: 1px solid var(--border);">
-                        <img src="aus1.png" alt="Meta Ads messaging funnel results for Australian Shopify brand" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; padding: 12px;">
-                    </div>
-                    <div style="padding: 16px;">
-                        <p style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 0 0 4px;">Australia — Messaging Test</p>
-                        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">$2,500 → 389 conversations @ $6.42</p>
-                    </div>
-                </div>
-                <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div style="height: 200px; overflow: hidden; border-bottom: 1px solid var(--border);">
-                        <img src="uae1.png" alt="Meta Ads purchase funnel results for UAE Shopify fashion brand" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; padding: 12px;">
-                    </div>
-                    <div style="padding: 16px;">
-                        <p style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 0 0 4px;">UAE — Purchase Funnel</p>
-                        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">$750 → 21 purchases @ 3.2x ROAS</p>
-                    </div>
-                </div>
-            </div>
-
             <p style="text-align: center; font-size: 13px; color: var(--text-tertiary); margin-top: var(--space-8); font-style: italic;">All screenshots are directly from Meta Ads Manager. Client names redacted. Numbers verified.</p>
         </div>
     </section>
@@ -1419,7 +1403,7 @@
             <div class="final-cta-content">
                 <h2>Want A Second Opinion On Your Meta Ads?</h2>
                 <p>Book a 15-minute ad account review. We'll look at your current setup and tell you exactly where the leaks are — no obligation.</p>
-                <a href="https://calendly.com/optiviomediahq/new-meeting" class="btn-primary">👉 Review My Ad Account</a>
+                <a href="https://calendly.com/optiviomediahq/new-meeting" class="btn-primary">Review My Ad Account</a>
                 <p class="cta-subtext">Takes 15 minutes. You'll know where the leaks are.</p>
                 <p class="cta-reassurance">If we're not a fit, we'll tell you in the first call.</p>
                 <p style="font-size: 13px; color: var(--text-tertiary); margin-top: var(--space-5); margin-bottom: 0;">
