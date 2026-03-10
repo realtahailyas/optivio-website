@@ -915,6 +915,116 @@
             outline-offset: 2px;
         }
 
+        /* NAVIGATION */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: var(--space-6);
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            font-size: 14px !important;
+            font-weight: 600 !important;
+            color: white !important;
+            background: var(--accent);
+            padding: 10px 20px;
+            border-radius: var(--radius-md);
+            transition: all 0.2s ease !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent-hover) !important;
+            color: white !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: var(--space-8) 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-8);
+            text-align: center;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: var(--space-2);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        @media (max-width: 639px) {
+            .nav-links {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-5);
+            }
+
+            .stat-number {
+                font-size: 26px;
+            }
+
+            .stat-label {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links a:not(.nav-cta) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            footer .container > div:first-child {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 32px !important;
+            }
+        }
+
+        @media (max-width: 639px) {
+            footer .container > div:first-child {
+                grid-template-columns: 1fr !important;
+                gap: 24px !important;
+            }
+        }
+
         @media (prefers-reduced-motion: reduce) {
             *,
             *::before,
@@ -932,20 +1042,71 @@
       "name": "Optivio Media",
       "url": "https://optiviomedia.online",
       "logo": "https://optiviomedia.online/logo.png",
+      "description": "Founder-led Meta Ads management for eCommerce and Shopify brands. Structured testing, CPA control, and clean scaling.",
+      "founder": {
+        "@type": "Person",
+        "name": "Taha Ilyas",
+        "url": "https://tahailyas.com/"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "url": "https://calendly.com/optiviomediahq/new-meeting",
+        "contactType": "sales",
+        "availableLanguage": "English"
+      },
       "sameAs": [
         "https://www.instagram.com/optiviomedia",
-        "https://www.crunchbase.com/organization/optivio-media"
+        "https://www.crunchbase.com/organization/optivio-media",
+        "https://github.com/realtahailyas/optivio-website"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Taha Ilyas",
+      "url": "https://tahailyas.com/",
+      "image": "https://tahailyas.com/images/taha.png",
+      "jobTitle": "Meta Ads Specialist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Optivio Media",
+        "url": "https://optiviomedia.online"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/tahailyas/",
+        "https://www.instagram.com/tahailyasofficial/",
+        "https://www.facebook.com/tahailyas",
+        "https://www.crunchbase.com/person/taha-ilyas",
+        "https://medium.com/@muhammad.taha.ansari8242",
+        "https://optiviomedia.online/about-taha-ilyas.html",
+        "https://github.com/realtahailyas/optivio-website",
+        "https://www.linkedin.com/pulse/what-managing-72000-meta-ad-spend-taught-us-scaling-ecommerce-ilyas-ggzyf/",
+        "https://www.linkedin.com/pulse/why-most-e-commerce-brands-fail-meta-ads-even-after-spending-ilyas-ndgwf",
+        "https://www.linkedin.com/pulse/why-most-digital-marketing-companies-dubai-fail-scaling-taha-ilyas-1wjlf",
+        "https://www.linkedin.com/pulse/your-roas-drops-when-you-increase-budget-structure-broken-taha-ilyas-1yyyf",
+        "https://www.linkedin.com/pulse/how-choose-digital-marketing-company-dubai-youre-e-commerce-ilyas-gpmmf",
+        "https://medium.com/@muhammad.taha.ansari8242/what-we-learned-from-managing-72-000-in-ad-spend-for-a-dubai-brand-1ada8ed22e7e",
+        "https://medium.com/@muhammad.taha.ansari8242/the-silent-architect-behind-dubais-fast-growing-ecommerce-brands-meet-taha-ilyas-9acd9478e6f6"
       ]
     }
     </script>
 </head>
 <body>
 
-    <header style="padding: 24px 0; border-bottom: 1px solid var(--border); background: var(--bg-primary);">
-        <div class="container">
+    <header style="padding: 20px 0; border-bottom: 1px solid var(--border); background: var(--bg-primary); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); background: rgba(255,255,255,0.95);">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
             <a href="index.html" style="display: inline-block;">
-                <img src="logowhite.png" alt="Optivio" style="height: 40px; width: auto;">
+                <img src="logowhite.png" alt="Optivio Media — Meta Ads Agency for eCommerce" style="height: 38px; width: auto;">
             </a>
+            <nav class="nav-links">
+                <a href="#method">Method</a>
+                <a href="#proof-of-execution">Proof</a>
+                <a href="#about">About</a>
+                <a href="meta-ads-shopify-dubai.html">Services</a>
+                <a href="https://calendly.com/optiviomediahq/new-meeting" class="nav-cta">Free Audit</a>
+            </nav>
         </div>
     </header>
 
@@ -980,6 +1141,29 @@
             </div>
         </div>
     </section>
+
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">$72K+</span>
+                    <span class="stat-label">Ad Spend Managed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3.2x</span>
+                    <span class="stat-label">Average ROAS</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Markets (UAE · AUS · CA)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Person Running Your Ads</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="problem">
         <div class="container">
@@ -1037,43 +1221,103 @@
         <div class="container">
             <div class="execution-header">
                 <h2>Real Ad Accounts. Real Spend. No Slides.</h2>
-                <p class="execution-subtext">Snapshots from real ad accounts showing testing, demand validation, and performance signals across regions.</p>
+                <p class="execution-subtext">Direct screenshots from Meta Ads Manager — testing phases, scaling results, and performance signals across UAE, Australia, and Canada.</p>
             </div>
 
             <div class="execution-grid">
                 <div class="execution-card">
                     <div class="execution-image">
-                        <img src="ca.png" alt="Meta Ads lead generation testing results for Canadian eCommerce market" loading="lazy">
+                        <img src="images/1.png" alt="Meta Ads campaign performance results showing real spend and ROAS data" loading="lazy">
                     </div>
                     <div class="execution-content">
-                        <h4>Lead Generation Testing — CA Market</h4>
-                        <p>Used audience testing and lookalikes to validate cost-efficient lead flow.</p>
-                        <p class="execution-stat"><strong>$3,000 spend → 224 leads @ $13.39 CPL</strong></p>
+                        <h4>Campaign Performance Overview</h4>
+                        <p>Full campaign view showing spend allocation, purchase events, and return on ad spend across testing and scaling phases.</p>
                     </div>
                 </div>
 
                 <div class="execution-card">
                     <div class="execution-image">
-                        <img src="aus1.png" alt="Meta Ads messaging funnel test results for Australian Shopify brand" loading="lazy">
+                        <img src="images/2.png" alt="Meta Ads creative testing results with cost-per-purchase breakdown" loading="lazy">
                     </div>
                     <div class="execution-content">
-                        <h4>Messaging Funnel Test — AUS Market</h4>
-                        <p>Tested cold messaging campaigns to measure conversation cost and intent quality.</p>
-                        <p class="execution-stat"><strong>$2,500 spend → 389 conversations @ $6.42</strong></p>
+                        <h4>Creative Testing Results</h4>
+                        <p>Structured creative tests — isolating hooks, angles, and formats to identify scalable winners before increasing budget.</p>
                     </div>
                 </div>
 
                 <div class="execution-card">
                     <div class="execution-image">
-                        <img src="uae1.png" alt="Meta Ads purchase funnel test results for UAE Shopify fashion brand" loading="lazy">
+                        <img src="images/3.png" alt="Meta Ads audience testing and CPA optimization data for eCommerce" loading="lazy">
                     </div>
                     <div class="execution-content">
-                        <h4>Early Purchase Funnel Test — UAE Fashion Brand</h4>
-                        <p>Small-budget purchase testing to validate audience structure before scale.</p>
-                        <p class="execution-stat"><strong>$750 spend → 21 purchases @ 3.2 ROAS</strong></p>
+                        <h4>Audience Segmentation & CPA Control</h4>
+                        <p>Audience-level breakdown showing CPA variance and profitable segments identified during the testing framework.</p>
+                    </div>
+                </div>
+
+                <div class="execution-card">
+                    <div class="execution-image">
+                        <img src="images/4.png" alt="Meta Ads scaling phase showing budget increases with stable ROAS" loading="lazy">
+                    </div>
+                    <div class="execution-content">
+                        <h4>Scaling Phase Dashboard</h4>
+                        <p>Budget scaling with CPA control — showing stable unit economics as daily spend increases through our 3-phase framework.</p>
+                    </div>
+                </div>
+
+                <div class="execution-card">
+                    <div class="execution-image">
+                        <img src="images/5.png" alt="Meta Ads Manager purchase conversion data for Shopify brand" loading="lazy">
+                    </div>
+                    <div class="execution-content">
+                        <h4>Purchase Conversion Data</h4>
+                        <p>Real purchase and add-to-cart metrics from Shopify-connected campaigns. Event-matched through Pixel + CAPI setup.</p>
+                    </div>
+                </div>
+
+                <div class="execution-card">
+                    <div class="execution-image">
+                        <img src="images/6.png" alt="Meta Ads regional market performance comparison across UAE Australia Canada" loading="lazy">
+                    </div>
+                    <div class="execution-content">
+                        <h4>Cross-Market Performance</h4>
+                        <p>Performance signals across regional campaigns — different CPMs, audience sizes, and creative fatigue patterns per market.</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Additional Proof Strip -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: var(--space-12);">
+                <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;">
+                    <div style="height: 200px; overflow: hidden; border-bottom: 1px solid var(--border);">
+                        <img src="ca.png" alt="Meta Ads lead generation testing in Canadian eCommerce market" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; padding: 12px;">
+                    </div>
+                    <div style="padding: 16px;">
+                        <p style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 0 0 4px;">Canada — Lead Gen Test</p>
+                        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">$3,000 → 224 leads @ $13.39 CPL</p>
+                    </div>
+                </div>
+                <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;">
+                    <div style="height: 200px; overflow: hidden; border-bottom: 1px solid var(--border);">
+                        <img src="aus1.png" alt="Meta Ads messaging funnel results for Australian Shopify brand" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; padding: 12px;">
+                    </div>
+                    <div style="padding: 16px;">
+                        <p style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 0 0 4px;">Australia — Messaging Test</p>
+                        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">$2,500 → 389 conversations @ $6.42</p>
+                    </div>
+                </div>
+                <div style="background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;">
+                    <div style="height: 200px; overflow: hidden; border-bottom: 1px solid var(--border);">
+                        <img src="uae1.png" alt="Meta Ads purchase funnel results for UAE Shopify fashion brand" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; padding: 12px;">
+                    </div>
+                    <div style="padding: 16px;">
+                        <p style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 0 0 4px;">UAE — Purchase Funnel</p>
+                        <p style="font-size: 13px; color: var(--text-secondary); margin: 0;">$750 → 21 purchases @ 3.2x ROAS</p>
+                    </div>
+                </div>
+            </div>
+
+            <p style="text-align: center; font-size: 13px; color: var(--text-tertiary); margin-top: var(--space-8); font-style: italic;">All screenshots are from real Meta Ads Manager accounts. Client identities kept confidential.</p>
         </div>
     </section>
 
@@ -1183,21 +1427,39 @@
         </div>
     </section>
 
-    <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 48px 0; margin-top: 48px;">
-        <div class="container" style="text-align: center;">
-            <img src="logowhite.png" alt="Optivio" style="height: 36px; width: auto; margin-bottom: 16px; opacity: 0.8;">
-            <p style="font-size: 14px; color: var(--text-tertiary); margin: 0;">
-                © 2026 Optivio. All rights reserved.
-            </p>
-            <p style="font-size: 13px; color: var(--text-tertiary); margin-top: 8px;">
-                Founder: <a href="about-taha-ilyas.html" style="color: var(--text-tertiary); text-decoration: underline;">Taha Ilyas</a>
-            </p>
-            <p style="font-size: 13px; color: var(--text-tertiary); margin-top: 6px;">
-                Services: <a href="meta-ads-shopify-dubai.html" style="color: var(--text-tertiary); text-decoration: underline;">Shopify Meta Ads Dubai</a> · <a href="meta-ads-shopify-australia.html" style="color: var(--text-tertiary); text-decoration: underline;">Shopify Ads Australia</a> · <a href="meta-ads-shopify-canada.html" style="color: var(--text-tertiary); text-decoration: underline;">Shopify Ads Canada</a>
-            </p>
-            <p style="font-size: 13px; color: var(--text-tertiary); margin-top: 4px;">
-                Resources: <a href="how-to-scale-shopify-meta-ads-uae.html" style="color: var(--text-tertiary); text-decoration: underline;">Scaling Guide</a> · <a href="shopify-pixel-capi-uae.html" style="color: var(--text-tertiary); text-decoration: underline;">Pixel & CAPI Guide</a> · <a href="case-study-uae-fashion-meta-ads.html" style="color: var(--text-tertiary); text-decoration: underline;">UAE Case Study</a>
-            </p>
+    <footer style="background: #0F172A; border-top: 1px solid var(--border); padding: 64px 0 40px; margin-top: 48px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px;">
+                <div>
+                    <img src="logowhite.png" alt="Optivio Media" style="height: 36px; width: auto; margin-bottom: 16px; filter: brightness(10);">
+                    <p style="font-size: 14px; color: #94A3B8; line-height: 1.7; margin: 0 0 16px;">Founder-led Meta Ads management for eCommerce brands. Structured testing, CPA control, and clean scaling decisions.</p>
+                    <p style="font-size: 13px; color: #64748B; margin: 0;">Dubai, UAE · <a href="https://tahailyas.com/" target="_blank" rel="noopener noreferrer" style="color: #94A3B8; text-decoration: underline;">tahailyas.com</a></p>
+                </div>
+                <div>
+                    <p style="font-size: 13px; font-weight: 600; color: #CBD5E1; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 16px;">Services</p>
+                    <p style="margin: 0 0 10px;"><a href="meta-ads-shopify-dubai.html" style="font-size: 14px; color: #94A3B8; text-decoration: none;">Meta Ads Dubai</a></p>
+                    <p style="margin: 0 0 10px;"><a href="meta-ads-shopify-australia.html" style="font-size: 14px; color: #94A3B8; text-decoration: none;">Meta Ads Australia</a></p>
+                    <p style="margin: 0 0 10px;"><a href="meta-ads-shopify-canada.html" style="font-size: 14px; color: #94A3B8; text-decoration: none;">Meta Ads Canada</a></p>
+                    <p style="margin: 0;"><a href="case-study-uae-fashion-meta-ads.html" style="font-size: 14px; color: #94A3B8; text-decoration: none;">UAE Case Study</a></p>
+                </div>
+                <div>
+                    <p style="font-size: 13px; font-weight: 600; color: #CBD5E1; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 16px;">Resources</p>
+                    <p style="margin: 0 0 10px;"><a href="how-to-scale-shopify-meta-ads-uae.html" style="font-size: 14px; color: #94A3B8; text-decoration: none;">Scaling Guide</a></p>
+                    <p style="margin: 0 0 10px;"><a href="shopify-pixel-capi-uae.html" style="font-size: 14px; color: #94A3B8; text-decoration: none;">Pixel & CAPI Guide</a></p>
+                    <p style="margin: 0;"><a href="about-taha-ilyas.html" style="font-size: 14px; color: #94A3B8; text-decoration: none;">About the Founder</a></p>
+                </div>
+                <div>
+                    <p style="font-size: 13px; font-weight: 600; color: #CBD5E1; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 16px;">Connect</p>
+                    <p style="margin: 0 0 10px;"><a href="https://www.linkedin.com/in/tahailyas/" target="_blank" rel="noopener noreferrer" style="font-size: 14px; color: #94A3B8; text-decoration: none;">LinkedIn</a></p>
+                    <p style="margin: 0 0 10px;"><a href="https://instagram.com/optiviomedia" target="_blank" rel="noopener noreferrer" style="font-size: 14px; color: #94A3B8; text-decoration: none;">Instagram</a></p>
+                    <p style="margin: 0 0 10px;"><a href="https://www.crunchbase.com/person/taha-ilyas" target="_blank" rel="noopener noreferrer" style="font-size: 14px; color: #94A3B8; text-decoration: none;">Crunchbase</a></p>
+                    <p style="margin: 0;"><a href="https://medium.com/@muhammad.taha.ansari8242" target="_blank" rel="noopener noreferrer" style="font-size: 14px; color: #94A3B8; text-decoration: none;">Medium</a></p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #1E293B; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                <p style="font-size: 13px; color: #64748B; margin: 0;">© 2026 Optivio Media. All rights reserved.</p>
+                <p style="font-size: 13px; color: #64748B; margin: 0;">Founded by <a href="about-taha-ilyas.html" style="color: #94A3B8; text-decoration: underline;">Taha Ilyas</a> · <a href="https://tahailyas.com/" target="_blank" rel="noopener noreferrer" style="color: #94A3B8; text-decoration: underline;">tahailyas.com</a></p>
+            </div>
         </div>
     </footer>
 
